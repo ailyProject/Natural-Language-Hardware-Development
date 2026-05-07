@@ -51,7 +51,7 @@
 示例：
 
 ```text
-我使用 ESP32 做温湿度上传项目。请连接 WiFi，读取 DHT20 温湿度，每 10 秒通过 MQTT 发布到主题 classroom/env。连接成功时串口输出 WIFI CONNECTED，MQTT 断开时自动重连。如果读取失败，不发布数据，只输出错误日志。
+我使用 ESP32 做温湿度上传项目。请连接 WiFi，读取 DHT20 温湿度，每 10 秒通过 MQTT 发布到主题 room/env。连接成功时串口输出 WIFI CONNECTED，MQTT 断开时自动重连。如果读取失败，不发布数据，只输出错误日志。
 ```
 
 ## 11.4 实验项目一：联网状态显示
@@ -94,7 +94,7 @@ MQTT 很适合物联网控制。设备订阅一个主题，收到命令后控制
 提示词示例：
 
 ```text
-我使用 ESP32 做 MQTT 控制 LED 项目。设备连接 WiFi 后连接 MQTT 服务器，订阅主题 classroom/led。收到 ON 时点亮板载 LED，收到 OFF 时熄灭。每次状态变化后发布当前状态到 classroom/led/status。请加入断线重连，并在串口输出 WiFi 和 MQTT 状态。
+我使用 ESP32 做 MQTT 控制 LED 项目。设备连接 WiFi 后连接 MQTT 服务器，订阅主题 device/led。收到 ON 时点亮板载 LED，收到 OFF 时熄灭。每次状态变化后发布当前状态到 device/led/status。请加入断线重连，并在串口输出 WiFi 和 MQTT 状态。
 ```
 
 > 图片占位 11-3：MQTT 主题发布和订阅关系图。
